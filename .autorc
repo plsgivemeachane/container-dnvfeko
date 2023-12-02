@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    "git-tag",
+    "all-contributors",
+    "first-time-contributor",
+    "released"
+  ],
+  "owner": "plsgivemeachane",
+  "repo": "container-dnvfeko",
+  "name": "plsgivemeachane",
+  "email": "onenew553@gmail.com",
+}
