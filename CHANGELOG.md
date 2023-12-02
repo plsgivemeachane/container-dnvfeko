@@ -1,3 +1,15 @@
+# v0.0.13 (Sat Dec 02 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Update entry.sh ([@plsgivemeachane](https://github.com/plsgivemeachane))
+
+#### Authors: 1
+
+- [@plsgivemeachane](https://github.com/plsgivemeachane)
+
+---
+
 # v0.0.12 (Sat Dec 02 2023)
 
 #### ⚠️ Pushed to `main`
