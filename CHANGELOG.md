@@ -1,3 +1,15 @@
+# v0.0.2 (Sat Dec 02 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Create Dockerfile ([@plsgivemeachane](https://github.com/plsgivemeachane))
+
+#### Authors: 1
+
+- [@plsgivemeachane](https://github.com/plsgivemeachane)
+
+---
+
 # v0.0.1 (Sat Dec 02 2023)
 
 :tada: This release contains work from a new contributor! :tada:
