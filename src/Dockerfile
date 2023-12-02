@@ -8,5 +8,8 @@ RUN apt-get update && \
 # Expose port 80
 EXPOSE 80
 
-# Set the entrypoint to run the HTTP server using Python
-CMD ["entry.sh"]
+# Copy entry.sh from your local directory to the container
+COPY entry.sh /entry.sh
+
+# Set the entrypoint to run the entry.sh script
+ENTRYPOINT ["bash", "/entry.sh"]
