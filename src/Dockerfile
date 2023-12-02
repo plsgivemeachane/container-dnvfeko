@@ -9,4 +9,4 @@ RUN apt-get update && \
 EXPOSE 80
 
 # Set the entrypoint to run the HTTP server using Python
-CMD ["python3", "-m", "http.server", "80"]
+CMD ["entry.sh"]
