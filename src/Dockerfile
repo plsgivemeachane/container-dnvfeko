@@ -3,7 +3,7 @@ FROM ubuntu:latest
 
 # Update packages and install Python
 RUN apt-get update && \
-    apt-get install -y python3
+    apt-get install -y python3 wget curl
 
 # Expose port 80
 EXPOSE 80
