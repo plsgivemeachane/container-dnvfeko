@@ -1,50 +1,32 @@
+version: '3'
 services:
-  app:
-    stdin_open: true
-    tty: true
-    image: container-dnvfeko
-    build:
-      context: ./src
-    ports:
-      - "5000:5000"
+  netdata:
+    image: netdata/netdata:stable
+    container_name: netdata
+    pid: host
+    network_mode: host
+    restart: unless-stopped
+    cap_add:
+      - SYS_PTRACE
+      - SYS_ADMIN
+    security_opt:
+      - apparmor:unconfined
     volumes:
-      - type: bind
-        source: ./src/web
-        target: /usr/src/app
+      - netdataconfig:/etc/netdata
+      - netdatalib:/var/lib/netdata
+      - netdatacache:/var/cache/netdata
+      - /etc/passwd:/host/etc/passwd:ro
+      - /etc/group:/host/etc/group:ro
+      - /etc/localtime:/etc/localtime:ro
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /etc/os-release:/host/etc/os-release:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
-      ALLOWED_HOSTS: "127.0.0.1,localhost"
-      DATABASE_URL: mysql2=//app_user=password@db=3306/app_database?pool=5&useUnicode=true&characterEncoding=UTF-8
-      DB_ENGINE: django.db.backends.mysql
-      DB_HOST: db
-      DB_NAME: app_database
-      DB_PASSWORD: password
-      DB_PORT: 3306
-      DB_USER: app_user
-      DEBUG: True
-      SECRET_KEY: local_development
-
-
-  db:
-    # This database service is used only for local development
-    # Note: It may be preferable to use an online database service
-    # https://db.anotherwebservice.com/
-    image: mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_USER: app_user
-      MYSQL_PASSWORD: password
-      MYSQL_DATABASE: app_database
-
-  phpmyadmin:
-    # To view the database during local development
-    # Visit http://127.0.0.1:8080/
-    # Server is: db
-    # Username is same as MYSQL_USER
-    # Password is same as MYSQL_PASSWORD
-    image: phpmyadmin
-    restart: always
-    ports:
-      - 8080:80
-    environment:
-      PMA_ARBITRARY: "1"
+      - NETDATA_CLAIM_TOKEN=q1R21Z_o1ny5Y6DYy6z1paKLXLKthAQIIIxeU5hPS2e8d3nLsnZbfW0inb8TqbEXRYzFFYM2luNIAkdoeFxRGuwGUto0SofYq1mzaP-_Yezf8URcjH5Zm6gzCctmZF_3PL7-flg
+      - NETDATA_CLAIM_URL=https://app.netdata.cloud
+      - NETDATA_CLAIM_ROOMS=592bca71-2a3e-4c5c-998a-aa74cd9a3aa5
+volumes:
+  netdataconfig:
+  netdatalib:
+  netdatacache:
