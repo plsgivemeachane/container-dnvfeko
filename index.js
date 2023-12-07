@@ -72,7 +72,7 @@ app.get("/prompt/:pr", async (req, res) => {
   }
 })
 
-app.listen(3000, () => {
+app.listen(80, () => {
   console.log("Worked in 3000")
   init()
   lock = false;
