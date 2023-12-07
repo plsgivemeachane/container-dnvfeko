@@ -1,0 +1,26 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.0.6",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jimp": "^0.22.8",
+    "json-bigint": "^1.0.0",
+    "node_characterai": "^1.1.8",
+    "node-fetch": "^3.2.6",
+    "puppeteer": "^20.8.3",
+    "puppeteer-core": "^20.8.3",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "uuid": "^9.0.0"
+  }
+}
