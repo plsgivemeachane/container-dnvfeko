@@ -1,3 +1,15 @@
+# v0.0.16 (Thu Dec 07 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Update index.js ([@plsgivemeachane](https://github.com/plsgivemeachane))
+
+#### Authors: 1
+
+- [@plsgivemeachane](https://github.com/plsgivemeachane)
+
+---
+
 # v0.0.15 (Thu Dec 07 2023)
 
 #### ⚠️ Pushed to `main`
